@@ -18,6 +18,9 @@ def main():
 	ask(conn, sql.SQL_qu5, "Qu 5: What types of problems occur with bikes and how often?")
 	ask(conn, sql.SQL_qu6, "Qu 6: Which bikes have unresolved problems?")
 	ask(conn, sql.SQL_qu7, "Qu 7: How long does it typically take to resolve a problem with a bike?")
+	ask(conn, sql.SQL_qu9, "Qu 9: How many journeys weren't finished?")
+	ask(conn, sql.SQL_qu10, "Qu 10: Which months see the most issues raised?")
+	ask(conn, sql.SQL_qu11, "Qu 11: From which stations do people do the longest journeys on average?")
 
 	conn.close()
 

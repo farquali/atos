@@ -69,4 +69,17 @@ ORDER BY days)
 GROUP BY issue_id
 """
 
+SQL_qu9 = """SELECT COUNT(*) FROM journey WHERE end_time IS NULL"""
+
+SQL_qu10 = """SELECT month, count(month) as nissues FROM
+(SELECT issue_id, strftime('%m', raise_time) as month
+FROM bike_issue) GROUP BY month ORDER BY nissues DESC"""
+
+SQL_qu11 = """SELECT start_station_id, start_station_name, ROUND(AVG(duration)/60,2) as avg_in_mins
+FROM journey
+GROUP BY start_station_name ORDER BY avg_in_mins DESC LIMIT 10"""
+
+
+
+
 
