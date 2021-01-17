@@ -7,6 +7,19 @@ def main():
 	conn = db_connect()
 
 	ask(conn, sql.SQL_qu1, "Qu 1: How many bike stations are in the cycle network?")
+	ask(conn, sql.SQL_qu2, "Qu 2: How many bikes operate within the cycle network?")
+	ask(conn, sql.SQL_qu3a_MIN, "Qu 3a: What is the minimum journey time, for the entire year?")
+	ask(conn, sql.SQL_qu3a_MAX, "Qu 3a: What is the maximum journey time, for the entire year?")
+	ask(conn, sql.SQL_qu3a_AVG, "Qu 3a: What is the average journey time, for the entire year?")
+	ask(conn, sql.SQL_qu3b_MIN, "Qu 3b: What is the minimum journey time per month?")
+	ask(conn, sql.SQL_qu3b_MAX, "Qu 3b: What is the maximum journey time per month?")
+	ask(conn, sql.SQL_qu3b_AVG, "Qu 3b: What is the average journey time per month?")
+	ask(conn, sql.SQL_qu4, "Qu 4: Which bike stations are visited the least?")
+	ask(conn, sql.SQL_qu5, "Qu 5: What types of problems occur with bikes and how often?")
+	ask(conn, sql.SQL_qu6, "Qu 6: Which bikes have unresolved problems?")
+	ask(conn, sql.SQL_qu7, "Qu 7: How long does it typically take to resolve a problem with a bike?")
+
+	conn.close()
 
 
 def db_connect():
@@ -37,13 +50,6 @@ def ask(conn, query, qutxt = ""):
 			print(f"Could not complete query: {e}")
 
 	input("\nContinue...\n")
-
-
-
-
-
-
-
 
 
 main()
