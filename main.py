@@ -15,6 +15,9 @@ def main():
 	loadi.load_issue_csvs()
 	loadj.load_journey_csvs()
 
+	#Populate remaining tables: bike, issue, station
+	db.post_dataload_inserts()
+
 	toc = time.perf_counter()
 	print(f">>>Total processing time: {(toc-tic)/60.00:0.2f} mins")
 

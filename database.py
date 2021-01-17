@@ -37,7 +37,9 @@ def post_dataload_inserts():
 
 	conn = db_connect()
 
-	executeSQL(conn, sql.SQL_INSERT_INTO_bike, ">>>INSERTING data to bike table")
+	#executeSQL(conn, sql.SQL_INSERT_INTO_bike, ">>>INSERTING data to bike table")
+	executeSQL(conn, sql.SQL_INSERT_INTO_bike_from_journey, ">>>INSERTING data to bike table")
+	executeSQL(conn, sql.SQL_INSERT_INTO_bike_from_bike_issue)
 	executeSQL(conn, sql.SQL_INSERT_INTO_issue, ">>>INSERTING data to issue table")
 	executeSQL(conn, sql.SQL_INSERT_INTO_station, ">>>INSERTING data to station table")
 
